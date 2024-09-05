@@ -7,7 +7,7 @@ const port = 3001;
 const app = express();
 app.use(
   cors({
-    origin: ["https://deploy-front-end-delta.vercel.app/"],
+    origin: ["https://deploy-front-end-delta.vercel.app"],
     methods: ["POST", "GET", "DELETE", "PUT"],
     credentials: true,
   })
