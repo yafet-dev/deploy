@@ -13,7 +13,11 @@ function UpdateUser() {
   const Update = (e) => {
     e.preventDefault();
     axios
-      .put("http://localhost:3001/updateUser/" + id, { name, email, age })
+      .put("https://deploy-api-gold.vercel.app/updateUser/" + id, {
+        name,
+        email,
+        age,
+      })
       .then((result) => {
         navigate("/");
         console.log(result);
@@ -23,7 +27,7 @@ function UpdateUser() {
 
   useEffect(() => {
     axios
-      .get("http://localhost:3001/getUser/" + id)
+      .get("https://deploy-api-gold.vercel.app/getUser/" + id)
       .then((result) => {
         setName(result.data.name);
         setEmail(result.data.email);

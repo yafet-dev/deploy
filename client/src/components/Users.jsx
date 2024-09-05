@@ -16,7 +16,7 @@ function Users() {
   // Function to fetch users
   const fetchUsers = () => {
     axios
-      .get("http://localhost:3001/")
+      .get("https://deploy-api-gold.vercel.app/")
       .then((result) => setUsers(result.data))
       .catch((err) => console.log(err));
   };
@@ -24,7 +24,7 @@ function Users() {
   // Function to handle delete
   const handleDelete = (id) => {
     axios
-      .delete("http://localhost:3001/deleteUser/" + id)
+      .delete("https://deploy-api-gold.vercel.app/deleteUser/" + id)
       .then((result) => {
         console.log(result);
 
