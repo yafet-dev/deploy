@@ -5,7 +5,12 @@ const UserModel = require("./models/Users");
 const port = 3001;
 
 const app = express();
-app.use(cors());
+app.use(cors( {
+origin: [],
+methods: ["POST", "GET", "DELETE", "PUT"],
+credentials:true
+}
+));
 app.use(express.json());
 
 mongoose.connect(
